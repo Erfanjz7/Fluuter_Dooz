@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'StartingPlayerSelection.dart';
 
-class SinglePLayerPage extends StatefulWidget {
+class SinglePlayerPagePc extends StatefulWidget {
   @override
-  State<SinglePLayerPage> createState() => _SinglePLayerPageState();
+  State<SinglePlayerPagePc> createState() => _SinglePlayerPagePcState();
 }
 
 enum Player { computer, person }
@@ -12,7 +11,7 @@ enum Result { computer, person, tie, continuous }
 
 Player playe = Player.person;
 
-List<int> square  = List.filled(9, 0);
+List<int> square  = [1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0];
 Player player = Player.person;
 
 int computerMove() {
@@ -162,7 +161,7 @@ Result checkWinner() {
   }
 }
 
-String text1 = "";
+String text1 = "O";
 String text2 = "";
 String text3 = "";
 String text4 = "";
@@ -279,8 +278,7 @@ void pcTurn(int a){
   }
 }
 
-
-class _SinglePLayerPageState extends State<SinglePLayerPage> {
+class _SinglePlayerPagePcState extends State<SinglePlayerPagePc> {
   void reestart(){
     setState(() {
       isButtonActive1 = true;
@@ -292,7 +290,7 @@ class _SinglePLayerPageState extends State<SinglePLayerPage> {
       isButtonActive7 = true;
       isButtonActive8 = true;
       isButtonActive9 = true;
-      text1 = "";
+      text1 = "O";
       text2 = "";
       text3 = "";
       text4 = "";
@@ -302,7 +300,7 @@ class _SinglePLayerPageState extends State<SinglePLayerPage> {
       text7 = "";
       text8 = "";
       text9 = "";
-      square[0] = 0;
+      square[0] = 1;
       square[1] = 0;
       square[2] = 0;
       square[3] = 0;
@@ -802,5 +800,4 @@ class _SinglePLayerPageState extends State<SinglePLayerPage> {
 
     );
   }
-
 }

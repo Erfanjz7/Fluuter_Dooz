@@ -1,4 +1,3 @@
-import 'package:dooz/MultiPlayerPage.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
@@ -14,8 +13,8 @@ String Winner = "";
 int counter = 0;
 
 String text1 = "";
-String text2 = "";
 String text3 = "";
+String text2 = "";
 String text4 = "";
 String text5 = "";
 String text6 = "";
@@ -67,8 +66,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
       text7 = "";
       text8 = "";
       text9 = "";
-      print("babe");
-      print(square.toString());
       square[0] = 0;
       square[1] = 0;
       square[2] = 0;
@@ -78,7 +75,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
       square[6] = 0;
       square[7] = 0;
       square[8] = 0;
-      print(square.toString());
       counter = 0;
       currentNumber = 0;
       Winner = "";
@@ -174,7 +170,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text1 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -212,7 +207,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text4 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -250,7 +244,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text7 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -293,7 +286,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text2 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -331,7 +323,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text5 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -369,7 +360,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text8 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -412,7 +402,6 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                                   text3 = "O";
                                   square[currentNumber - 1] = 1;
                                 }
-                                print(square.toString());
                                 counter = counter + 1;
                                 winnerhecker();
                               });
@@ -442,17 +431,16 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                               setState(() {
                                 isButtonActive6 = false;
                                 currentNumber = 6;
-                              if(counter % 2 == 0){
-                                text6 = "X";
-                                square[currentNumber - 1] = 2;
-                              }
-                              else{
-                                text6 = "O";
-                                square[currentNumber - 1] = 1;
-                              }
-                              print(square.toString());
-                              counter = counter + 1;
-                              winnerhecker();
+                                if(counter % 2 == 0){
+                                  text6 = "X";
+                                  square[currentNumber - 1] = 2;
+                                }
+                                else{
+                                  text6 = "O";
+                                  square[currentNumber - 1] = 1;
+                                }
+                                counter = counter + 1;
+                                winnerhecker();
                               });
                             } : null,
                             style: ButtonStyle(
@@ -480,17 +468,16 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                               setState(() {
                                 isButtonActive9 = false;
                                 currentNumber = 9;
-                              if(counter % 2 == 0){
-                                text9 = "X";
-                                square[currentNumber - 1] = 2;
-                              }
-                              else{
-                                text9 = "O";
-                                square[currentNumber - 1] = 1;
-                              }
-                              print(square.toString());
-                              counter = counter + 1;
-                              winnerhecker();
+                                if(counter % 2 == 0){
+                                  text9 = "X";
+                                  square[currentNumber - 1] = 2;
+                                }
+                                else{
+                                  text9 = "O";
+                                  square[currentNumber - 1] = 1;
+                                }
+                                counter = counter + 1;
+                                winnerhecker();
                               });
                             } : null,
                             style: ButtonStyle(

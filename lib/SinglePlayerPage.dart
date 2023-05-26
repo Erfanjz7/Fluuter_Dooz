@@ -220,7 +220,7 @@ void WinnerChecker(){
       Winner = "Winner Is O";
     }else{
       allDisable();
-      Winner = "Tie Game. Better Luck Next Time!";
+      Winner = "Tie Game.";
     }
   }
 }

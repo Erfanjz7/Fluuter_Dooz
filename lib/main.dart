@@ -23,15 +23,15 @@ class _DoozState extends State<Dooz> {
           style: TextStyle(color: Colors.white,),
         ),
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.white,
-        ),
+        // leading: Icon(
+        //   Icons.info,
+        //   color: Colors.white,
+        // ),
         backgroundColor: Colors.purple,
         elevation: 0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.menu, color: Colors.white,), onPressed: () {},
+            icon: Icon(Icons.info, color: Colors.white,), onPressed: () {},
           )
         ],
       ),

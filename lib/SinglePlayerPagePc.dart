@@ -10,7 +10,7 @@ enum Player { computer, person }
 enum Result { computer, person, tie, continuous }
 
 
-List<int> square = [1, 0, 0, 0, 0, 0, 0, 0, 0];
+List<int> square = [0, 0, 0, 0, 1, 0, 0, 0, 0];
 Player player = Player.person;
 
 int computerMove() {
@@ -175,11 +175,11 @@ Result checkWinner() {
   }
 }
 
-String text1 = "O";
+String text1 = "";
 String text2 = "";
 String text3 = "";
 String text4 = "";
-String text5 = "";
+String text5 = "O";
 String text6 = "";
 String text7 = "";
 String text8 = "";
@@ -221,7 +221,7 @@ void WinnerChecker() {
       Winner = "Winner Is O";
     } else {
       allDisable();
-      Winner = "Tie Game. Better Luck Next Time!";
+      Winner = "Tie Game.";
     }
   }
 }
@@ -306,21 +306,21 @@ class _SinglePlayerPagePcState extends State<SinglePlayerPagePc> {
       isButtonActive7 = true;
       isButtonActive8 = true;
       isButtonActive9 = true;
-      text1 = "O";
+      text1 = "";
       text2 = "";
       text3 = "";
       text4 = "";
-      text5 = "";
+      text5 = "O";
       text6 = "";
       text6 = "";
       text7 = "";
       text8 = "";
       text9 = "";
-      square[0] = 1;
+      square[0] = 0;
       square[1] = 0;
       square[2] = 0;
       square[3] = 0;
-      square[4] = 0;
+      square[4] = 1;
       square[5] = 0;
       square[6] = 0;
       square[7] = 0;

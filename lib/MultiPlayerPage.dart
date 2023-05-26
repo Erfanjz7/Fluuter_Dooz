@@ -108,7 +108,7 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
     if (square[0] != 0 && square[1] != 0 && square[2] != 0 && square[3] != 0 &&
         square[4] != 0 && square[5] != 0 &&
         square[6] != 0 && square[7] != 0 && square[8] != 0) {
-      Winner = "Tie Game, Better Luck Next Time!";
+      Winner = "Tie Game.";
     }
   }
 
@@ -544,7 +544,7 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
             ),
             OutlinedButton(onPressed: null, style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.white),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
+                foregroundColor: MaterialStateProperty.all(Colors.orange),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),

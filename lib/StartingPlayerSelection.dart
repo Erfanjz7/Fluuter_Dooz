@@ -65,7 +65,7 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
                         backgroundColor: MaterialStateProperty.all(
                             Colors.white),
                         foregroundColor: MaterialStateProperty.all(
-                            Colors.purple),
+                            Colors.teal),
                         shape: MaterialStateProperty.all<
                             RoundedRectangleBorder>(RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -98,7 +98,7 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
                         backgroundColor: MaterialStateProperty.all(
                             Colors.white),
                         foregroundColor: MaterialStateProperty.all(
-                            Colors.purple),
+                            Colors.teal),
                         shape: MaterialStateProperty.all<
                             RoundedRectangleBorder>(RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20)),

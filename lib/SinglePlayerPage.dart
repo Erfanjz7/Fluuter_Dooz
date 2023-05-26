@@ -203,7 +203,7 @@ void WinnerChecker(){
       Winner = "Winner Is X!";
     }else if(Result.computer==temp){
       allDisable();
-      Winner = "Winnr Is O";
+      Winner = "Winner Is O";
     }else{
       allDisable();
       Winner = "Tie Game. Better Luck Next Time!";
@@ -795,7 +795,21 @@ class _SinglePLayerPageState extends State<SinglePLayerPage> {
                 ],
               ),
             ),
-            Text(Winner)
+            OutlinedButton(onPressed: null, style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+                foregroundColor: MaterialStateProperty.all(Colors.black),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                )),
+                textStyle: MaterialStateProperty.all(TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                )),
+                elevation: MaterialStateProperty.all(10),
+                fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                child: Center(
+                  child: Text(Winner),
+                ))
           ],
         ),
       ),

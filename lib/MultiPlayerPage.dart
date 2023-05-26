@@ -115,7 +115,7 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome To Single Player Mode!",
+        title: Text("Welcome To Multi Player Mode!",
           style: TextStyle(color: Colors.white , fontSize: 19),
         ),
         centerTitle: true,
@@ -502,7 +502,21 @@ class _MultiPLayerPageState extends State<MultiPLayerPage> {
                 ],
               ),
             ),
-            Text(Winner)
+            OutlinedButton(onPressed: null, style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+                foregroundColor: MaterialStateProperty.all(Colors.black),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                )),
+                textStyle: MaterialStateProperty.all(TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                )),
+                elevation: MaterialStateProperty.all(10),
+                fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                child: Center(
+                  child: Text(Winner),
+                ))
           ],
         ),
       ),

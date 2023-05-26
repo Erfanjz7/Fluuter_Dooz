@@ -19,7 +19,7 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/nature-2384_640.jpg'),
+              image: AssetImage('assets/images/1477279.jpg'),
               fit: BoxFit.cover,
             )
         ),
@@ -29,7 +29,22 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Select The Starter:")
+              OutlinedButton(onPressed: null,
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.teal),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      )),
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                      )),
+                      elevation: MaterialStateProperty.all(10),
+                      fixedSize: MaterialStateProperty.all(Size(350, 100))),
+                  child: Center(
+                    child: Text("Who Will Start The Game?"),
+                  ))
               ],
             ),
             Row(
@@ -41,8 +56,23 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
                         builder: (context) => SinglePLayerPage()
                     ));
                   });
-                },child: Center(
+                },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                  foregroundColor: MaterialStateProperty.all(Colors.purple),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    )),
+          textStyle: MaterialStateProperty.all(TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          )),
+          elevation: MaterialStateProperty.all(10),
+          fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                child: Center(
                   child: Text("Person"),
+
+
                 ))
 
               ],
@@ -56,7 +86,20 @@ class _StartingPlayerSelectionState extends State<StartingPlayerSelection> {
                         builder: (context) => SinglePlayerPagePc()
                     ));
                   });
-                }, child: Center(
+                },
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white),
+                        foregroundColor: MaterialStateProperty.all(Colors.purple),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        )),
+                        textStyle: MaterialStateProperty.all(TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        )),
+                        elevation: MaterialStateProperty.all(10),
+                        fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                    child: Center(
                   child: Text("Computer"),
                 ))
               ],

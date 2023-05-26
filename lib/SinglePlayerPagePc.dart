@@ -202,7 +202,7 @@ void WinnerChecker(){
       Winner = "Winner Is X!";
     }else if(Result.computer==temp){
       allDisable();
-      Winner = "Winnr Is O";
+      Winner = "Winner Is O";
     }else{
       allDisable();
       Winner = "Tie Game. Better Luck Next Time!";
@@ -319,7 +319,8 @@ class _SinglePlayerPagePcState extends State<SinglePlayerPagePc> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome To Single Player Mode!",
+        title: Text("Welcome To Single Player Mode! "
+            "Have a good luck against AI! :)",
           style: TextStyle(color: Colors.white , fontSize: 19),
         ),
         centerTitle: true,
@@ -793,7 +794,21 @@ class _SinglePlayerPagePcState extends State<SinglePlayerPagePc> {
                 ],
               ),
             ),
-            Text(Winner)
+          OutlinedButton(onPressed: null, style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.white),
+              foregroundColor: MaterialStateProperty.all(Colors.black),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              )),
+              textStyle: MaterialStateProperty.all(TextStyle(
+                fontSize: 25,
+                color: Colors.white,
+              )),
+              elevation: MaterialStateProperty.all(10),
+              fixedSize: MaterialStateProperty.all(Size(200, 50))),
+              child: Center(
+            child: Text(Winner),
+          ))
           ],
         ),
       ),

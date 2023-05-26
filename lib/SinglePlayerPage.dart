@@ -10,7 +10,6 @@ class SinglePLayerPage extends StatefulWidget {
 enum Player { computer, person }
 enum Result { computer, person, tie, continuous }
 
-Player playe = Player.person;
 
 List<int> square  = List.filled(9, 0);
 Player player = Player.person;
@@ -21,7 +20,7 @@ int computerMove() {
   for (int i = 0; i <= 8; i++) {
     if (square[i] == 0) {
       square[i] = 1;
-      int score = miniMax(square, false);
+      int score = miniMax(square, false, -2, 2);
       square[i] = 0;
 
       if (score > bestScore) {
@@ -33,8 +32,8 @@ int computerMove() {
   return bestMove + 1;
 }
 
-int miniMax(List tempSquares, bool isMaximizing) {
-//checkWinner and calculate score
+int miniMax(List tempSquares, bool isMaximizing, int alpha, int beta) {
+  // checkWinner and calculate score
   Result result = checkWinner();
   if (result != Result.continuous) {
     if (result == Result.computer) {
@@ -51,10 +50,16 @@ int miniMax(List tempSquares, bool isMaximizing) {
     for (int i = 0; i <= 8; i++) {
       if (tempSquares[i] == 0) {
         tempSquares[i] = 1;
-        int score = miniMax(tempSquares, false);
+        int score = miniMax(tempSquares, false, alpha, beta);
         tempSquares[i] = 0;
         if (score > bestScore) {
           bestScore = score;
+        }
+        if (alpha <= bestScore) {
+          alpha = bestScore;
+        }
+        if (alpha >= beta) {
+          break; // beta cut
         }
       }
     }
@@ -63,10 +68,19 @@ int miniMax(List tempSquares, bool isMaximizing) {
     for (int i = 0; i <= 8; i++) {
       if (tempSquares[i] == 0) {
         tempSquares[i] = 2;
-        int score = miniMax(tempSquares, true);
+        int score = miniMax(tempSquares, true, alpha, beta);
         tempSquares[i] = 0;
+
         if (score < bestScore) {
           bestScore = score;
+        }
+
+        if (beta >= bestScore) {
+          beta = bestScore;
+        }
+
+        if (alpha >= beta) {
+          break; // alpha cut
         }
       }
     }

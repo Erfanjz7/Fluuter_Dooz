@@ -3,9 +3,11 @@ import 'SinglePlayerPage.dart';
 import 'StartingPlayerSelection.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Dooz()));
+void main() =>
+    runApp(MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Dooz()));
+
 class Dooz extends StatefulWidget {
   @override
   State<Dooz> createState() => _DoozState();
@@ -29,8 +31,7 @@ class _DoozState extends State<Dooz> {
         elevation: 0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.menu,color: Colors.white,), onPressed: () {
-          },
+            icon: Icon(Icons.menu, color: Colors.white,), onPressed: () {},
           )
         ],
       ),
@@ -39,7 +40,8 @@ class _DoozState extends State<Dooz> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/photo_2023-05-25_00-06-53.jpg'),
+                image: AssetImage(
+                    'assets/images/photo_2023-05-25_00-06-53.jpg'),
                 fit: BoxFit.cover
             )
         ),
@@ -61,7 +63,7 @@ class _DoozState extends State<Dooz> {
                     ),
                     //elevation: MaterialStateProperty.all<>(value)
                   ),
-                  onPressed:() {
+                  onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => StartingPlayerSelection()
                     ));
@@ -92,7 +94,7 @@ class _DoozState extends State<Dooz> {
                     ),
                     //elevation: MaterialStateProperty.all<>(value)
                   ),
-                  onPressed:() {
+                  onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => MultiPLayerPage()
                     ));

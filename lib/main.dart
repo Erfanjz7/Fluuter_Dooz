@@ -4,9 +4,7 @@ import 'StartingPlayerSelection.dart';
 import 'package:flutter/material.dart';
 
 void main() =>
-    runApp(MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Dooz()));
+    runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Dooz()));
 
 class Dooz extends StatefulWidget {
   @override
@@ -20,7 +18,9 @@ class _DoozState extends State<Dooz> {
       appBar: AppBar(
         title: Text(
           "Welcome to ARE DooZ",
-          style: TextStyle(color: Colors.white,),
+          style: TextStyle(
+            color: Colors.white,
+          ),
         ),
         centerTitle: true,
         // leading: Icon(
@@ -31,7 +31,11 @@ class _DoozState extends State<Dooz> {
         elevation: 0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.info, color: Colors.white,), onPressed: () {},
+            icon: Icon(
+              Icons.info,
+              color: Colors.white,
+            ),
+            onPressed: () {},
           )
         ],
       ),
@@ -40,11 +44,9 @@ class _DoozState extends State<Dooz> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(
-                    'assets/images/photo_2023-05-25_00-06-53.jpg'),
-                fit: BoxFit.cover
-            )
-        ),
+                image:
+                    AssetImage('assets/images/photo_2023-05-25_00-06-53.jpg'),
+                fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -65,15 +67,12 @@ class _DoozState extends State<Dooz> {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => StartingPlayerSelection()
-                    ));
+                        builder: (context) => StartingPlayerSelection()));
                   },
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Single Player")
-                      ],
+                      children: [Text("Single Player")],
                     ),
                   ),
                 ),
@@ -96,15 +95,12 @@ class _DoozState extends State<Dooz> {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => MultiPLayerPage()
-                    ));
+                        builder: (context) => MultiPLayerPage()));
                   },
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Multi Player")
-                      ],
+                      children: [Text("Multi Player")],
                     ),
                   ),
                 ),
@@ -116,5 +112,3 @@ class _DoozState extends State<Dooz> {
     );
   }
 }
-
-
